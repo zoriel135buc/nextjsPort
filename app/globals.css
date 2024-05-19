@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --palette-darkest: #0e0e0e;
+    --palette-darker: #111111;
+    --palette-white: #fdfdfd;
+    --background-image: url('/logos/background.jpg');
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+.ImageClassName {
+    filter: brightness(140%);
+    border-color: white;
+}
+
+body {
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    color: var(--palette-white);
+    /* background-color: var(--palette-darkest) !important; */
+
+    /* to set the background-color to black so i need to note all this text below */
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+
+}
+
+[data-rmiz-modal-overlay="visible"] {
+    background-color: black !important;
+}
+
+[data-rmiz-modal-img] {
+    @apply rounded-xl;
+    cursor: pointer !important;
+}
+
+[data-rmiz-btn-unzoom] {
+    cursor: pointer !important;
+}
+
+[data-rmiz-content="found"] img,
+[data-rmiz-content="found"] svg,
+[data-rmiz-content="found"] [role="img"],
+[data-rmiz-content="found"] [data-zoom] {
+    cursor: pointer !important;
+}
