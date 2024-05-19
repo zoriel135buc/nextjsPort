@@ -35,7 +35,10 @@ function Landing() {
       type: "main",
       content: "Visit my LinkedIn profile",
       onClick: () =>
-        window.open("https://www.linkedin.com/in/david-scali/", "_blank"),
+        window.open(
+          "https://www.linkedin.com/in/zoriel-bucris-724177273/",
+          "_blank"
+        ),
     },
     // {
     //     type: 'main',
@@ -110,8 +113,8 @@ function Landing() {
       <div className="landing-text z-1">
         <div className="landing-text-primary text-xl lg:text-3xl">
           Welcome to my protfolio, I&apos;m{" "}
-          <span className="text-primary font-bold"> David</span>
-          <p>Data Analyst with strong passion for creating </p>
+          <span className="text-primary font-bold"> Zoriel</span>
+          <p>fullstack developer with strong passion for creating </p>
           <p> data-driven insights and leading end-to-end projects. </p>
         </div>
         <div className="landing-text-secondary text-lg mt-4 text-md font-normal">

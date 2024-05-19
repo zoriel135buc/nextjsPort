@@ -15,7 +15,10 @@ export default function Header() {
       type: "header",
       content: "LinkedIn",
       onClick: () =>
-        window.open("https://www.linkedin.com/in/david-scali/", "_blank"),
+        window.open(
+          "https://www.linkedin.com/in/zoriel-bucris-724177273/",
+          "_blank"
+        ),
     },
     {
       type: "header",
