@@ -23,7 +23,7 @@ export default function Header() {
     {
       type: "header",
       content: "CV",
-      onClick: () => window.open("cv/David Cohen Scali - CV.pdf", "_blank"),
+      onClick: () => window.open("cv/Zoriel Buchris -cv.pdf", "_blank"),
     },
     {
       type: "header",
@@ -50,7 +50,7 @@ export default function Header() {
         <Button
           testid="header-title"
           type="logo"
-          content="David Cohen Scali"
+          content="Zoriel Bucris"
           onClick={() => {
             //window.location.reload(); window.scrollTo(0, 0);
             window.scrollTo({ top: 0, behavior: "smooth" });

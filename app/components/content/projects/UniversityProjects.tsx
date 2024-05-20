@@ -15,7 +15,7 @@ function UniversityProjects() {
 
   return (
     <div
-      id="Academic Projects"
+      id=" Projects"
       className="UniversityProjects max-w-5xl py-20 border-b select-none border-slate-700 
             mx-6
             md:mx-20

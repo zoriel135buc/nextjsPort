@@ -55,9 +55,7 @@ function CurriculumVitae() {
             <Button
               type="main"
               content="My Standard CV - PDF"
-              onClick={() =>
-                window.open("cv/David Cohen Scali - CV.pdf", "_blank")
-              }
+              onClick={() => window.open("cv/Zoriel Buchris -cv.pdf", "_blank")}
             />
           </div>
         ) : (
@@ -79,9 +77,7 @@ function CurriculumVitae() {
             <Button
               type="main"
               content="My Standard CV - PDF"
-              onClick={() =>
-                window.open("cv/David Cohen Scali - CV.pdf", "_blank")
-              }
+              onClick={() => window.open("cv/Zoriel Buchris -cv.pdf", "_blank")}
             />
           </>
         )}

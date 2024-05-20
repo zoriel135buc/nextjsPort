@@ -1,51 +1,53 @@
-import React from 'react';
-import withFadeIn from '@functional/withFadeIn';
+import React from "react";
+import withFadeIn from "@functional/withFadeIn";
 
 function PrimeMinisterOffice() {
-    return (
-        <div id="Prime Minister Office" className="Prime-Minister max-w-5xl py-20 border-b select-none border-slate-700 
+  return (
+    <div
+      id="Boarding School Guide for At-Risk Youth"
+      className="Prime-Minister max-w-5xl py-20 border-b select-none border-slate-700 
             mx-6
             md:mx-20
-            lg:mx-40">
-                
-            <h1 className="text-3xl text-left text-white font-bold">Data Analyst</h1>
-            <h2 className="text-xl text-left text-white font-bold mt-2"> Prime Minister's Office</h2>
-            <h3 className='text-lg text-left text-white mt-2'>From October 2022</h3>
-            <br />
-            <p className="text-lg text-left"> In my role on the Control team, I optimize governmental surveys to assess the qualities of public service employees, offering actionable insights. Additionally, I analyzed and enhance information systems within the governmental portal and construct surveys to efficiently delegate tasks to government offices. </p>
-            <div className="text-mm text-left">
-                <div className="text-base font-bold mt-4">
-                    Project:
-                </div>
-                <ul style={{ listStyleType: 'disc' }} className="ml-6">
-                    <li> Human Capital Metrics Development (Gender Equality, Occupational versatility, etc.)</li>
-                    <li> Prototyping employee Portal systems <strong>90,000 employees</strong> </li>
-                    <li> Survey creation & Office oversight <strong>35 Offices</strong></li>
-                    <li> Dashboard Development (for Internal KPI utilization)</li>
-                </ul>
-
-                <div className="text-base font-bold mt-4">Technologies: </div>
-                <ul style={{ listStyleType: 'disc' }} className="ml-6">
-                    <li><strong>Excel</strong> (VBA)</li>
-                    <li><strong>paython</strong> (Pandas & Numpay)</li>
-                    <li><strong>SQL</strong>(PowerBi) </li>
-                    <li><strong>Agile</strong> (Canva,Zoho Creator,Figma)</li>
-                </ul>
-
-                <div className="text-base font-bold mt-4">Details:</div>
-                <ul style={{ listStyleType: 'disc' }} className="ml-6">
-                    <li>Constructed and developed control indicators using Python and Excel.</li>
-                    <li>Utilized Agile methodology to analyze and characterize Information Systems within the governmental Portal,</li>
-                    <p>Drafted mockups and functional documents.</p>
-                    <li>Developed surveys and control criteria in Excel to optimize task allocation across various offices,</li>
-                    <p> aligning with the KPIs indicators set by the state commissioner.</p>
-                    <li>Leveraged SQL for data querying and analysis, designed insightful dashboards using Power BI </li>
-                    <p> to empower data-driven decision-making.</p>
-                </ul>
-
-            </div>
-        </div>
-    );
+            lg:mx-40"
+    >
+      <h1 className="text-3xl text-left text-white font-bold">FullStack</h1>
+      <h2 className="text-xl text-left text-white font-bold mt-2">
+        {" "}
+        Boarding School Guide for At-Risk Youth
+      </h2>
+      <h3 className="text-lg text-left text-white mt-2">From October 2024</h3>
+      <br />
+      <p className="text-lg text-left">
+        {" "}
+        My position required me to have a spatial vision of the needs of the
+        student in front of me, along with the ability to predict his future
+        path and direct it accordingly. This role required improvisation and
+        problem solving in the field.
+      </p>
+      <div className="text-mm text-left">
+        <div className="text-base font-bold mt-4">Details:</div>
+        <ul style={{ listStyleType: "disc" }} className="ml-6">
+          <li>
+            Collaborated closely with counselors, educators, and social workers
+            to gather requirements and identify key features needed to support
+            the academic, emotional, and social well-being of at-risk youth.
+          </li>
+          <li>
+            Resulting in a tailored solution that addressed their unique needs
+            and challenges.
+          </li>
+          <li>
+            Demonstrated empathy, patience, and understanding in working with
+            students facing personal difficulties.
+          </li>
+          <li>
+            Providing guidance, encouragement, and resources to help them
+            overcome obstacles and achieve their goals.
+          </li>
+        </ul>
+      </div>
+    </div>
+  );
 }
 
 export default withFadeIn(PrimeMinisterOffice);

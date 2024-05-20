@@ -49,7 +49,7 @@ function Landing() {
     {
       type: "main",
       content: "Email Me",
-      onClick: () => (window.location.href = "mailto:scali0506@gmail.com"),
+      onClick: () => (window.location.href = "mailto:zorielbuc135@gmail.com"),
     },
   ];
 
@@ -114,23 +114,16 @@ function Landing() {
         <div className="landing-text-primary text-xl lg:text-3xl">
           Welcome to my protfolio, I&apos;m{" "}
           <span className="text-primary font-bold"> Zoriel</span>
-          <p>fullstack developer with strong passion for creating </p>
-          <p> data-driven insights and leading end-to-end projects. </p>
+          <p>Full Stack Developer proficient in React </p>
+          <p> JavaScript, specializing in website development</p>
         </div>
         <div className="landing-text-secondary text-lg mt-4 text-md font-normal">
           <p>
             {" "}
-            Currently I&apos;m working as a Data Analyst at the {"  "}
-            <span className="text-accent font-semibold">
-              Prime Minister's Office
-            </span>
-            ,
+            With a background in music I bring a unique{"  "}
+            <span className="text-accent font-semibold"></span>
           </p>
-          <p>
-            {" "}
-            where I create innovative solutions to life through data and
-            creativity.{" "}
-          </p>
+          <p> blend of creativity and out-of-the-box thinking to projects </p>
         </div>
       </div>
       <div className={`landing-buttons flex max-w-max flex-col mt-8`}>
