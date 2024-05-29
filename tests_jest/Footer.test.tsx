@@ -1,3 +1,4 @@
+// Footer.test.js
 import React from "react";
 import "@testing-library/jest-dom";
 import { act } from "react-dom/test-utils";
@@ -5,12 +6,12 @@ import { screen, render, fireEvent, waitFor } from "@testing-library/react";
 import { useInView } from "react-intersection-observer";
 import Footer from "@ui/Footer";
 import Button from "@ui/Button";
+import LogoSmall from "../public/logo_small_gray.jpg";
 
 jest.mock("react-intersection-observer");
 
 describe("Footer", () => {
   (useInView as jest.Mock).mockImplementation(() => [null, true]);
-
   beforeEach(() => {
     jest.clearAllMocks();
     jest.resetModules();
@@ -25,16 +26,17 @@ describe("Footer", () => {
   it("should render the button contents", () => {
     render(<Footer />);
     const emailButton = screen.getByText("Email Me");
-    const whatsappButton = screen.getByText("WhatsApp");
+    const telegramButton = screen.getByText("WhatsApp");
     const linkedinButton = screen.getByText("LinkedIn");
 
     expect(emailButton).toBeInTheDocument();
-    expect(whatsappButton).toBeInTheDocument();
+    expect(telegramButton).toBeInTheDocument();
     expect(linkedinButton).toBeInTheDocument();
   });
 
   it("should test the email button", () => {
     render(<Footer />);
+
     expect(screen.getByRole("link", { name: "Email Me" })).toHaveAttribute(
       "href",
       "mailto:scali0506@gmail.com"
@@ -58,11 +60,9 @@ describe("Footer", () => {
 
     expect(onClickMock).toHaveBeenCalled();
   };
-
   it("should test the WhatsApp button", () => {
     testButtonClick("WhatsApp");
   });
-
   it("should test the LinkedIn button", () => {
     testButtonClick("LinkedIn");
   });
@@ -76,6 +76,7 @@ describe("Footer", () => {
 
     const logoImage = getByAltText("David Logo") as HTMLImageElement;
     expect(logoImage).toBeInTheDocument();
+    // expect(logoImage.src).toEqual(LogoSmall.src);
 
     const scrollToMock = jest.fn();
     global.scrollTo = scrollToMock;
@@ -85,8 +86,11 @@ describe("Footer", () => {
     expect(scrollToMock).toHaveBeenCalledWith({ top: 0, behavior: "smooth" });
   });
 
-  it("should test the responsiveness of the footer", async () => {
+  it("should test the responsiveness of the footer", () => {
     const { getByTestId } = render(<Footer />);
+
+    // desktop: footer-text-buttons flex text-sm mt-8
+    // mobile: footer-text-buttons flex text-sm mt-8 flex-col items-center
 
     const footerTextButtons = getByTestId("footer-text-buttons");
     expect(footerTextButtons).not.toHaveClass("flex-col items-center"); // desktop
@@ -95,8 +99,7 @@ describe("Footer", () => {
       window.innerWidth = 500;
       window.dispatchEvent(new Event("resize"));
     });
-
-    await waitFor(() => {
+    waitFor(() => {
       expect(footerTextButtons).toHaveClass("flex-col items-center"); // mobile
     });
   });

@@ -60,6 +60,11 @@ function CurriculumVitae() {
           </div>
         ) : (
           <>
+            <Button
+              type="main"
+              content="View CV Website"
+              onClick={() => window.open("https://nextjs-cv-main.vercel.app/")}
+            />
             <div className="mx-2"></div>
             <Button
               type="main"
