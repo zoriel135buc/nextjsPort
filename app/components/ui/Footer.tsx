@@ -8,18 +8,20 @@ import Logo from "@logos/mylogo1.png";
 
 function Footer() {
   const footerButtons = [
-    // {
-    //   type: "main",
-    //   content: "Email Me",
-    //   onClick: () => window.open("mailto:scali0506@gmail.com"),
-    // },
-    // {
-    //   testid: "WhatsApp",
-    //   type: "main",
-    //   content: "WhatsApp",
-    //   onClick: () => window.open("https://wa.me/qr/Z2J4TFILA3I6F1"),
-    // },
     {
+      testid: "Email Me",
+      type: "main",
+      content: "Email Me",
+      onClick: () => window.open("mailto:scali0506@gmail.com"),
+    },
+    {
+      testid: "WhatsApp",
+      type: "main",
+      content: "WhatsApp",
+      onClick: () => window.open("https://wa.me/qr/Z2J4TFILA3I6F1"),
+    },
+    {
+      testid: "LinkedIn",
       type: "main",
       content: "LinkedIn",
       onClick: () =>
@@ -73,6 +75,7 @@ function Footer() {
                 </div>
               ) : (
                 <Button
+                  testid={button.testid}
                   type={button.type as "main"}
                   content={button.content}
                   onClick={button.onClick}
