@@ -8,11 +8,11 @@ import Logo from "@logos/mylogo1.png";
 
 function Footer() {
   const footerButtons = [
-    {
-      type: "main",
-      content: "Email Me",
-      onClick: () => window.open("mailto:scali0506@gmail.com"),
-    },
+    // {
+    //   type: "main",
+    //   content: "Email Me",
+    //   onClick: () => window.open("mailto:scali0506@gmail.com"),
+    // },
     // {
     //   testid: "WhatsApp",
     //   type: "main",
