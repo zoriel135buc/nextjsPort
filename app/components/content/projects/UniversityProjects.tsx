@@ -29,11 +29,9 @@ function UniversityProjects() {
         <div className="fm-col2 flex-1 flex justify-center">
           <div className="fm-col1 flex-1 text-start mt-4">
             <h2 className="mb-1 text-2xl font-bold text-white">
-              Data Analyst for the 'Jerusalem Of Digital' project
+              PanicRest AppWeb For first aid for anxiety attacks
             </h2>
-            <h3 className="mb-4 text-lg text-white">
-              June 2022 to October 2023
-            </h3>
+            <h3 className="mb-4 text-lg text-white">April 2024 </h3>
             <h1 className="text-decoration-line: underline">
               {" "}
               <strong>
@@ -41,45 +39,33 @@ function UniversityProjects() {
               </strong>
             </h1>
             <div className="text-lg mt-2 ">
-              The challenges faced by small traditional businesses in adapting
-              to the digital world were exacerbated by the COVID-19 pandemic,
-              leading to closures while larger companies seized unexpected
-              opportunities. Recognizing this trend, the Jerusalem Municipality
-              initiated a project to digitalize small businesses in the city.
-              the municipality collaborated with the Department of Industrial
-              Engineering and Management at Azrieli College to address past
-              failures.
+              pinecRest is a web app designed to provide immediate support and
+              guidance to individuals experiencing panic attacks. Our platform
+              offers accessible tools and resources to help users manage and
+              alleviate the symptoms of panic attacks effectively. Panic attacks
+              can strike unexpectedly, leaving individuals feeling overwhelmed
+              and powerless. Many people lack access to timely support and
+              resources when experiencing these episodes, exacerbating their
+              distress and hindering their ability to cope effectively..
               <br />
-              <p>
-                Through the "Jerusalem of Digital" initiative, students provided
-                personalized support to businesses, including website
-                development and marketing strategies, aiming to empower owners
-                to operate their online presence independently.
-              </p>
               <div className="text-mm font-bold mt-4">Key Responsibilities</div>
               <ul style={{ listStyleType: "disc" }} className="ml-8 mt-3">
                 <li>
-                  Analyzing revenue and income data to determine project
-                  success,aiding in the development of a case study.(Excel)
+                  Implemented JWT-based user authentication for enhanced data
+                  security.
                 </li>
                 <li className="mt-1.5">
-                  Provided one-on-one mentorship to 15 businesses and Managed
-                  website performance tracking through Google Analytics.
+                  Designed intuitive UI for quick access to anxiety-relief
+                  resources.
                 </li>
                 <li className="mt-1.5">
-                  Led digitization for 120 businesses in Jerusalem via the Wobil
-                  development platform
-                </li>
-                <li className="mt-1.5">
-                  {" "}
-                  Participation and presentation in project competitions at 'the
-                  International Conference on Industrial Engineering in the Era
-                  of Digital Systems.
+                  Integrated error handling in Express.js for improved
+                  reliability.
                 </li>
               </ul>
             </div>
 
-            {!isMobile ? ( //desktop
+            {/* {!isMobile ? ( //desktop
               <div className={`img-desktop max-w-2xl mx-auto mt-9`}>
                 <Image
                   src={JerusalemOfDigital1.src}
@@ -122,15 +108,13 @@ function UniversityProjects() {
                   priority={true}
                 />
               </div>
-            )}
+            )} */}
             <div className="row mt-6 flex flex-nowrap justify-center">
               <Button
                 type="main"
                 content="View More"
                 onClick={() =>
-                  window.open(
-                    "https://drive.google.com/drive/folders/1zV_xHsKqJx8KmzKhQwPPvoO39vjXbGFr?usp=sharing"
-                  )
+                  window.open("https://github.com/zoriel135buc/LastProject")
                 }
               />
             </div>
@@ -142,42 +126,28 @@ function UniversityProjects() {
 
       <div className="fm-row flex flex-col">
         <div className="fm-col1 flex-1 text-start mt-4">
-          <h2 className="mb-1 text-2xl font-bold text-white">
-            Inventory management system for Lightricks
-          </h2>
-          <h3 className="mb-4 text-lg text-white">August 2021 to March 2023</h3>
+          <h2 className="mb-1 text-2xl font-bold text-white">Herolo Weather</h2>
+          <h3 className="mb-4 text-lg text-white">March 2024</h3>
           <h1 className="text-decoration-line: underline">
             {" "}
             <strong>
               {" "}
-              <em> Background</em>{" "}
+              <em> </em>{" "}
             </strong>
           </h1>
           <div className="text-lg mt-2">
-            This project focuses on creating an inventory management system for
-            small-medium businesses (SMBs). While large companies already have
-            extensive platforms for their needs, SMBs lack the financial
-            resources for such solutions. This project aims to address these
-            gaps by offering tailor-made solutions for B2B, B2C, and B2G
-            business models of small companies. By understanding the distinct
-            needs and planning systems of SMBs, this project strives to provide
-            an accessible and effective inventory management solution to
-            Lightricks company.
             <div className="text-mm font-bold mt-4">Key Responsibilities</div>
             <ul style={{ listStyleType: "disc" }} className="ml-8 mt-3">
               <li>
                 Application development, both client-side and server-side
                 (React, Node.js){" "}
               </li>
+              <li className="mt-1.5">Developed responsive UI with React.js.</li>
               <li className="mt-1.5">
-                Development of an algorithm for inventory management
+                Utilized Fetch API for efficient data fetching.
               </li>
               <li className="mt-1.5">
-                Drafting characterization documents and functional reports
-                aligned with business requirements.
-              </li>
-              <li className="mt-1.5">
-                Leading a 10-member team in this project{" "}
+                Implemented custom styles with Material-UI.
               </li>
             </ul>
           </div>
@@ -187,11 +157,11 @@ function UniversityProjects() {
                 type="main"
                 content="View Code"
                 onClick={() =>
-                  window.open("https://.com/davidscali/DAMA-application")
+                  window.open("https://github.com/zoriel135buc/herolo")
                 }
               />
             </div>
-            <div className={`mx-2`}></div>
+            {/* <div className={`mx-2`}></div>
             <div className={`button-mobile-wrapper ${isMobile ? "mb-2" : ""}`}>
               <Button
                 type="main"
@@ -200,11 +170,11 @@ function UniversityProjects() {
                   window.open("https://dama-client-vercel.vercel.app/inventory")
                 }
               />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
-      <div className="fm-col2 flex-1 flex justify-center mt-9">
+      {/* <div className="fm-col2 flex-1 flex justify-center mt-9">
         {!isMobile ? ( //desktop
           <div className={`img-desktop max-w-2xl`}>
             <VideoPlayer />
@@ -215,9 +185,9 @@ function UniversityProjects() {
             <VideoPlayer />
           </div>
         )}
-      </div>
+      </div> */}
 
-      <div className="fm-col1 flex-1 text-start mt-9">
+      {/* <div className="fm-col1 flex-1 text-start mt-9">
         <h2 className="mb-1 text-2xl font-bold text-white">
           Engineered a BI dashboard for 'Walmart'
         </h2>
@@ -259,7 +229,7 @@ function UniversityProjects() {
             <DashboardBI />
           </div>
         )}
-      </div>
+      </div> */}
     </div>
   );
 }

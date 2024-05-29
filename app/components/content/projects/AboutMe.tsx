@@ -16,7 +16,7 @@ function AboutMe() {
   return (
     <div
       id="More about me"
-      className="About me max-w-5xl py-20 border-b select-none border-slate-700 
+      className="About me max-w-5xl py-20 border-b select-none border-slate-700
             mx-6
             md:mx-20
             lg:mx-40
@@ -51,7 +51,7 @@ function AboutMe() {
         <div
           className={`img-desktop max-w-2xl mx-auto mt-9 flex justify-center items-center`}
         >
-          <Image
+          {/* <Image
             src={Latet.src}
             alt="Latet"
             width={5000}
@@ -59,14 +59,14 @@ function AboutMe() {
             className="w-[500px] h-auto rounded-xl"
             draggable={false}
             priority={true}
-          />
+          /> */}
         </div>
       ) : (
         //mobile
         <div
           className={`img-mobile max-w-full mx-auto mt-9 flex justify-center items-center`}
         >
-          <Image
+          {/* <Image
             src={Latet.src}
             alt="Latet"
             width={2000}
@@ -74,7 +74,7 @@ function AboutMe() {
             className="w-auto h-auto rounded-xl"
             draggable={false}
             priority={true}
-          />
+          /> */}
         </div>
       )}
 
@@ -97,7 +97,7 @@ function AboutMe() {
       {!isMobile ? ( //desktop
         //  justify-center items-center
         <div className={`img-desktop max-w-2xl mx-auto mt-9 flex`}>
-          <Image
+          {/* <Image
             src={TheBest.src}
             alt="TheBest"
             width={5000}
@@ -114,7 +114,7 @@ function AboutMe() {
             className="w-[200px] h-[333px] absolute top-[875px] right-[250px] rounded-xl mt-4 opacity-100 border-2 border-gray-400"
             draggable={false}
             priority={true}
-          />
+          /> */}
         </div>
       ) : (
         //mobile
@@ -164,7 +164,7 @@ function AboutMe() {
         </ul>
         {!isMobile ? ( //desktop
           <div className={`img-desktop max-w-2xl mx-auto mt-10 flex`}>
-            <Image
+            {/* <Image
               src={National.src}
               alt="National"
               width={5000}
@@ -172,14 +172,14 @@ function AboutMe() {
               className="w-[200px] absolute top-[1330px] right-[250px] rounded-xl mt-8 opacity-100 border-2 border-yellow-400"
               draggable={false}
               priority={true}
-            />
+            /> */}
           </div>
         ) : (
           //mobile
           <div
             className={`img-mobile max-w-full mx-auto mt-9 flex justify-center items-center`}
           >
-            <Image
+            {/* <Image
               src={National.src}
               alt="National"
               width={300}
@@ -187,7 +187,7 @@ function AboutMe() {
               className="w-[200px] h-auto rounded-xl  border-4 border-yellow-400"
               draggable={false}
               priority={true}
-            />
+            /> */}
           </div>
         )}
       </div>
