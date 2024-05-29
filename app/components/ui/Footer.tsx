@@ -34,11 +34,7 @@ function Footer() {
   return (
     <div
       id="Contact Me"
-      className="footer pt-20 flex items-center flex-col justify-center select-none
-            mx-6
-            md:mx-20
-            lg:mx-40
-        "
+      className="footer pt-20 flex items-center flex-col justify-center select-none mx-6 md:mx-20 lg:mx-40"
     >
       <div className="footer-text-title text-center text-3xl font-bold">
         LET&apos;S GET IN TOUCH
@@ -62,7 +58,7 @@ function Footer() {
               {button.content === "Email Me" ? (
                 <div
                   data-testid="Email Me"
-                  className={`footer-button-email w-fit py-2 px-4 font-light border border-slate-500 hover:bg-accent hover:text-background ease-in-out duration-200}`}
+                  className="footer-button-email w-fit py-2 px-4 font-light border border-slate-500 hover:bg-accent hover:text-background ease-in-out duration-200"
                 >
                   <a
                     draggable="false"
