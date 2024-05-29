@@ -13,12 +13,12 @@ function Footer() {
       content: "Email Me",
       onClick: () => window.open("mailto:scali0506@gmail.com"),
     },
-    {
-      testid: "WhatsApp",
-      type: "main",
-      content: "WhatsApp",
-      onClick: () => window.open("https://wa.me/qr/Z2J4TFILA3I6F1"),
-    },
+    // {
+    //   testid: "WhatsApp",
+    //   type: "main",
+    //   content: "WhatsApp",
+    //   onClick: () => window.open("https://wa.me/qr/Z2J4TFILA3I6F1"),
+    // },
     {
       type: "main",
       content: "LinkedIn",

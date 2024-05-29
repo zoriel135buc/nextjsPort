@@ -121,7 +121,7 @@ function AboutMe() {
         <div
           className={`img-mobile max-w-full mx-auto mt-9 flex justify-center items-center`}
         >
-          <Image
+          {/* <Image
             src={TheBest.src}
             alt="TheBest"
             width={300}
@@ -129,7 +129,7 @@ function AboutMe() {
             className="w-[530px] h-auto rounded-xl"
             draggable={false}
             priority={true}
-          />
+          /> */}
           {/* <Image
                                 src={CalmDown.src}
                                 alt="CalmDown"
