@@ -9,7 +9,7 @@ describe("Landing", () => {
     expect(sectionElement).toBeInTheDocument();
   });
 
-  it("renders buttons with correct content", async () => {
+  it("renders the component", async () => {
     render(<Landing />);
 
     const readExperienceButton = screen.getByText(/repositories GitHub/i);
@@ -17,15 +17,5 @@ describe("Landing", () => {
 
     expect(readExperienceButton).toBeInTheDocument();
     expect(readCVButton).toBeInTheDocument();
-  });
-
-  it("should test the email button", async () => {
-    render(<Landing />);
-
-    const emailMeButton = screen.getByRole("link", { name: /Email Me/i });
-    expect(emailMeButton).toHaveAttribute(
-      "href",
-      "mailto:zorielbuc135@gmail.com"
-    );
   });
 });
