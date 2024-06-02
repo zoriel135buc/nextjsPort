@@ -8,11 +8,11 @@ import Logo from "@logos/mylogo1.png";
 
 function Footer() {
   const footerButtons = [
-    {
-      type: "main",
-      content: "Email Me",
-      onClick: () => window.open("mailto:scali0506@gmail.com"),
-    },
+    // {
+    //   type: "main",
+    //   content: "Email Me",
+    //   onClick: () => window.open("mailto:scali0506@gmail.com"),
+    // },
     {
       testid: "WhatsApp",
       type: "main",
@@ -59,18 +59,8 @@ function Footer() {
             <div className={`button-mobile-wrapper ${isMobile ? "mb-2" : ""}`}>
               {button.content === "Email Me" ? (
                 <div
-                  data-testid="Email Me"
                   className={`footer-button-email w-fit py-2 px-4 font-light border border-slate-500 hover:bg-accent hover:text-background ease-in-out duration-200}`}
-                >
-                  <a
-                    draggable="false"
-                    href="mailto:scali0506@gmail.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Email Me
-                  </a>
-                </div>
+                ></div>
               ) : (
                 <Button
                   type={button.type as "main"}

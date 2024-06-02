@@ -112,7 +112,7 @@ function UniversityProjects() {
             <div className="row mt-6 flex flex-nowrap justify-center">
               <Button
                 type="main"
-                content="View More"
+                content="View code"
                 onClick={() =>
                   window.open("https://github.com/zoriel135buc/LastProject")
                 }

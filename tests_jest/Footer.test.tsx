@@ -25,22 +25,16 @@ describe("Footer", () => {
 
   it("should render the button contents", () => {
     render(<Footer />);
-    const emailButton = screen.getByText("Email Me");
+
     const telegramButton = screen.getByText("WhatsApp");
     const linkedinButton = screen.getByText("LinkedIn");
 
-    expect(emailButton).toBeInTheDocument();
     expect(telegramButton).toBeInTheDocument();
     expect(linkedinButton).toBeInTheDocument();
   });
 
   it("should test the email button", () => {
     render(<Footer />);
-
-    expect(screen.getByRole("link", { name: "Email Me" })).toHaveAttribute(
-      "href",
-      "mailto:scali0506@gmail.com"
-    );
   });
 
   const testButtonClick = (buttonContent: string) => {
