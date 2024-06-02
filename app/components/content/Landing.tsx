@@ -1,11 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import { Link } from "react-scroll";
 import { useIsMobile } from "@functional/useIsMobile";
 import Button from "@ui/Button";
 import Logo from "@logos/mylogo1.png";
 import Logophoto from "@logos/myphoto.jpg";
-import { Main } from "next/document";
 
 function Landing() {
   const technologies = [
