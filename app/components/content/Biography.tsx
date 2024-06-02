@@ -48,7 +48,7 @@ function Biography() {
             hold both tools: technological thinking and understanding social
             human behavior. <br />
           </p>
-
+          {/* 
           <p className="text-xl">
             <br />
             <strong className="text-2xl">Current Job</strong>
@@ -57,7 +57,7 @@ function Biography() {
             currently working at the Prime Minister's Office where I contribute
             through analyses to ensure equitable representation of diverse
             populations in the civil service.
-          </p>
+          </p> */}
 
           <div className="text-base my-4">
             {biographyButtons.map((button, index) => (
