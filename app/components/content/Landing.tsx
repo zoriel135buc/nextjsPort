@@ -26,7 +26,7 @@ function Landing() {
     },
     {
       type: "main",
-      content: "Visit my LinkedIn profile",
+      content: " LinkedIn ",
       onClick: () =>
         window.open(
           "https://www.linkedin.com/in/zoriel-bucris-724177273/",

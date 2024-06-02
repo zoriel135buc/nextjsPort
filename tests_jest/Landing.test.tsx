@@ -13,7 +13,7 @@ describe("Landing", () => {
     render(<Landing />);
 
     const readExperienceButton = screen.getByText(/repositories GitHub/i);
-    const readCVButton = screen.getByText(/Visit my LinkedIn profile /i);
+    const readCVButton = screen.getByText(/Visit my LinkedIn profile/i); // Adjusted regular expression
 
     expect(readExperienceButton).toBeInTheDocument();
     expect(readCVButton).toBeInTheDocument();
