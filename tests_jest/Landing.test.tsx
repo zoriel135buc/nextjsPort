@@ -4,13 +4,16 @@ import { render, screen } from "@testing-library/react";
 import { useIsMobile } from "@functional/useIsMobile";
 import Landing from "@content/Landing";
 
-jest.mock("react-intersection-observer");
-jest.mock("@functional/useIsMobile");
+// Mocking dependencies
+jest.mock("react-intersection-observer", () => ({
+  useInView: jest.fn().mockReturnValue([null, true]),
+}));
+
+jest.mock("@functional/useIsMobile", () => ({
+  useIsMobile: jest.fn().mockReturnValue(false),
+}));
 
 describe("Landing", () => {
-  (useInView as jest.Mock).mockImplementation(() => [null, true]);
-  (useIsMobile as jest.Mock).mockReturnValue(false); // Mock to return desktop view for consistent testing
-
   test("renders the component", () => {
     render(<Landing />);
     const sectionElement = screen.getByTestId("Landing");
