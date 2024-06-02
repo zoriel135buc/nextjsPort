@@ -9,10 +9,6 @@ jest.mock("react-intersection-observer", () => ({
   useInView: jest.fn().mockReturnValue([null, true]),
 }));
 
-jest.mock("@functional/useIsMobile", () => ({
-  useIsMobile: jest.fn().mockReturnValue(false),
-}));
-
 describe("Landing", () => {
   test("renders the component", () => {
     render(<Landing />);
