@@ -16,10 +16,6 @@ describe("Biography", () => {
 
   const testCases = [
     { label: "Academic Journey", key: "academicJourneyElement" },
-    // { label: 'Current Job', key: 'currentJobElement' },
-    // { label: 'Learning Journey', key: 'learningJourneyElement' },
-    // { label: 'Soft Skills Development', key: 'softSkillsDevelopmentElement' },
-    // { label: 'Collaborative Environment', key: 'collaborativeEnvironmentElement' },
   ];
 
   testCases.forEach(({ label, key }) => {

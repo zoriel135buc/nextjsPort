@@ -48,16 +48,6 @@ function Biography() {
             hold both tools: technological thinking and understanding social
             human behavior. <br />
           </p>
-          {/* 
-          <p className="text-xl">
-            <br />
-            <strong className="text-2xl">Current Job</strong>
-            <br />
-            As a Data Analyst, I am eager to create value from data. I am
-            currently working at the Prime Minister's Office where I contribute
-            through analyses to ensure equitable representation of diverse
-            populations in the civil service.
-          </p> */}
 
           <div className="text-base my-4">
             {biographyButtons.map((button, index) => (
@@ -74,24 +64,6 @@ function Biography() {
             ))}
           </div>
         </div>
-        {/* <div className="biography-text-col2 text-sm">
-                    <p>
-                        <strong>Learning Journey</strong><br />
-                        One of the most significant aspects of my career as a software engineer has been the opportunity to work on various projects throughout my high school years, university and in the free time. Through these projects I have gained proficiency in technologies such as JavaScript (React.js, Next.js) and CSS (SASS, Tailwind CSS).
-                    </p>
-
-                    <p>
-                        <br />
-                        <strong>Soft Skills Development</strong><br />
-                        In addition to technical expertise, I have also honed my soft skills throughout my career, particularly since joining Deloitte. Working in a dynamic and diverse environment has allowed me to develop effective communication and collaboration skills. I have learned the importance of strong teamwork, adaptibility, and problem-solving abilities.
-                    </p>
-
-                    <p>
-                        <br />
-                        <strong>Collaborative Environment</strong><br />
-                        As part of a cross-functional team composed of professionals from various regions in Italy and abroad, I have learned the importance of producing code that seamlessly integrates with others&apos;. Leveraging version control systems like Git, our team ensures smooth collaboration while maintaining code integrity. Furthermore, effective communication in English has fostered a global mindset and cultural exchange within our team.
-                    </p>
-                </div> */}
       </div>
     </div>
   );
