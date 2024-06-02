@@ -49,6 +49,16 @@ function Biography() {
             human behavior. <br />
           </p>
 
+          {/* <p className="text-xl">
+            <br />
+            <strong className="text-2xl">Current Job</strong>
+            <br />
+            As a Data Analyst, I am eager to create value from data. I am
+            currently working at the Prime Minister's Office where I contribute
+            through analyses to ensure equitable representation of diverse
+            populations in the civil service.
+          </p> */}
+
           <div className="text-base my-4">
             {biographyButtons.map((button, index) => (
               <React.Fragment key={index}>
