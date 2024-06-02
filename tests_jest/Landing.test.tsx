@@ -1,38 +1,42 @@
 import "@testing-library/jest-dom";
 import { useInView } from "react-intersection-observer";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { useIsMobile } from "@functional/useIsMobile";
 import Landing from "@content/Landing";
 
 jest.mock("react-intersection-observer");
+jest.mock("@functional/useIsMobile");
 
 describe("Landing", () => {
   (useInView as jest.Mock).mockImplementation(() => [null, true]);
+  (useIsMobile as jest.Mock).mockReturnValue(false); // Mock to return desktop view for consistent testing
+
   test("renders the component", () => {
     render(<Landing />);
     const sectionElement = screen.getByTestId("Landing");
     expect(sectionElement).toBeInTheDocument();
-    expect(screen.getByTestId("Landing")).toBeInTheDocument();
   });
 
-  it("renders buttons with correct content", () => {
+  it("renders buttons with correct content", async () => {
     render(<Landing />);
 
-    const readExperienceButton = screen.getByText(/Read my Experience/i);
-    const readCVButton = screen.getByText(/Read my CV/i);
-    const emailMeButton = screen.getByText(/Email Me/i);
+    // Using findByText for asynchronous content
+    const readExperienceButton = await screen.findByText(
+      /Latest work on GitHub/i
+    );
+    const readCVButton = await screen.findByText(/Visit my LinkedIn profile/i);
+    const emailMeButton = await screen.findByText(/Email Me/i);
 
     expect(readExperienceButton).toBeInTheDocument();
     expect(readCVButton).toBeInTheDocument();
     expect(emailMeButton).toBeInTheDocument();
   });
 
-  it("should test the email button", () => {
+  it("should test the email button", async () => {
     render(<Landing />);
 
-    expect(screen.getByRole("link", { name: "Email Me" })).toHaveAttribute(
-      "href",
-      "mailto:scali0506@gmail.com"
-    );
+    // Wait for the element to appear if necessary
+    const emailMeButton = await screen.findByRole("link", { name: "Email Me" });
+    expect(emailMeButton).toHaveAttribute("href", "mailto:scali0506@gmail.com");
   });
 });
