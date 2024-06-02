@@ -21,7 +21,7 @@ function Landing() {
   const landingButtons = [
     {
       type: "main",
-      content: "Latest work on GitHub",
+      content: "repositories GitHub",
       onClick: () => window.open("https://github.com/zoriel135buc", "_blank"),
     },
     {
