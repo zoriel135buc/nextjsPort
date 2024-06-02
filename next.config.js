@@ -1,10 +1,18 @@
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
 const path = require("path");
 const withImages = require("next-images");
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = withImages({
+  esModule: true,
+  webpack(config, options) {
+    return config;
+  },
+});
+
+module.exports = {
   compress: true,
-  webpack: (config, options) => {
+  webpack: (config) => {
     config.resolve.alias["@components"] = path.join(
       __dirname,
       "app/components"
@@ -30,5 +38,3 @@ const nextConfig = {
     return config;
   },
 };
-
-module.exports = withImages(nextConfig);

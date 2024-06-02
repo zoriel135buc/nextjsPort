@@ -1,41 +1,38 @@
 import "@testing-library/jest-dom";
 import { useInView } from "react-intersection-observer";
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
 import { useIsMobile } from "@functional/useIsMobile";
 import Landing from "@content/Landing";
 
-// Mocking dependencies
-jest.mock("react-intersection-observer", () => ({
-  useInView: jest.fn().mockReturnValue([null, true]),
-}));
+jest.mock("react-intersection-observer");
 
 describe("Landing", () => {
+  (useInView as jest.Mock).mockImplementation(() => [null, true]);
   test("renders the component", () => {
     render(<Landing />);
     const sectionElement = screen.getByTestId("Landing");
     expect(sectionElement).toBeInTheDocument();
+    expect(screen.getByTestId("Landing")).toBeInTheDocument();
   });
 
-  it("renders buttons with correct content", async () => {
+  it("renders buttons with correct content", () => {
     render(<Landing />);
 
-    // Using findByText for asynchronous content
-    const readExperienceButton = await screen.findByText(
-      /Latest work on GitHub/i
-    );
-    const readCVButton = await screen.findByText(/Visit my LinkedIn profile/i);
-    const emailMeButton = await screen.findByText(/Email Me/i);
+    const readExperienceButton = screen.getByText(/Read my Experience/i);
+    const readCVButton = screen.getByText(/Read my CV/i);
+    const emailMeButton = screen.getByText(/Email Me/i);
 
     expect(readExperienceButton).toBeInTheDocument();
     expect(readCVButton).toBeInTheDocument();
     expect(emailMeButton).toBeInTheDocument();
   });
 
-  it("should test the email button", async () => {
+  it("should test the email button", () => {
     render(<Landing />);
 
-    // Wait for the element to appear if necessary
-    const emailMeButton = await screen.findByRole("link", { name: "Email Me" });
-    expect(emailMeButton).toHaveAttribute("href", "mailto:scali0506@gmail.com");
+    expect(screen.getByRole("link", { name: "Email Me" })).toHaveAttribute(
+      "href",
+      "mailto:scali0506@gmail.com"
+    );
   });
 });
