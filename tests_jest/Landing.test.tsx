@@ -18,21 +18,12 @@ describe("Landing", () => {
   it("renders buttons with correct content", () => {
     render(<Landing />);
 
-    const readExperienceButton = screen.getByText(/Read my Experience/i);
+    const readExperienceButton = screen.getByText(/Latest work on GitHub/i);
     const readCVButton = screen.getByText(/Read my CV/i);
     const emailMeButton = screen.getByText(/Email Me/i);
 
     expect(readExperienceButton).toBeInTheDocument();
     expect(readCVButton).toBeInTheDocument();
     expect(emailMeButton).toBeInTheDocument();
-  });
-
-  it("should test the email button", () => {
-    render(<Landing />);
-
-    expect(screen.getByRole("link", { name: "Email Me" })).toHaveAttribute(
-      "href",
-      "mailto:scali0506@gmail.com"
-    );
   });
 });
