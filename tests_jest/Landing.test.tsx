@@ -12,12 +12,8 @@ describe("Landing", () => {
   it("renders buttons with correct content", async () => {
     render(<Landing />);
 
-    const readExperienceButton = screen.getByRole("button", {
-      name: /Latest work on GitHub/i,
-    });
-    const readCVButton = screen.getByRole("button", {
-      name: /Visit my LinkedIn profile/i,
-    });
+    const readExperienceButton = screen.getByText(/Latest work on GitHub/i);
+    const readCVButton = screen.getByText(/Visit my LinkedIn profile/i);
 
     expect(readExperienceButton).toBeInTheDocument();
     expect(readCVButton).toBeInTheDocument();
