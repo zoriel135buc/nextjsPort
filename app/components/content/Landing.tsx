@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { Link } from "react-scroll";
 import { useIsMobile } from "@functional/useIsMobile";
 import Button from "@ui/Button";
 import Logo from "@logos/mylogo1.png";
@@ -21,17 +22,22 @@ function Landing() {
   const landingButtons = [
     {
       type: "main",
-      content: "repositories GitHub",
+      content: "Latest work on GitHub",
       onClick: () => window.open("https://github.com/zoriel135buc", "_blank"),
     },
     {
       type: "main",
-      content: " LinkedIn ",
+      content: "Visit my LinkedIn profile",
       onClick: () =>
         window.open(
           "https://www.linkedin.com/in/zoriel-bucris-724177273/",
           "_blank"
         ),
+    },
+    {
+      type: "main",
+      content: "Email Me",
+      onClick: () => (window.location.href = "mailto:zorielbuc135@gmail.com"),
     },
   ];
 
@@ -41,9 +47,9 @@ function Landing() {
     <div
       data-testid="Landing"
       id="Welcome"
-      className="landing relative select-none py-20 border-b border-slate-700 flex flex-col max-w-5xl mx-6 md:mx-20 lg:mx-40"
+      className="landing relative select-none py-20 border-b border-slate-700 flex flex-col items-center max-w-5xl mx-6 md:mx-20 lg:mx-40"
     >
-      <div className="flex flex-col md:flex-row items-center">
+      <div className="flex flex-col md:flex-row w-full justify-between items-center">
         <div className="flex flex-col items-center md:items-start">
           <Image
             src={Logo.src}
@@ -69,7 +75,7 @@ function Landing() {
             </div>
           </div>
         </div>
-        <div className="mt-8 md:mt-0 md:ml-8">
+        <div className="mt-8 md:mt-0">
           <Image
             src={Logophoto.src}
             alt="myphoto"
@@ -81,27 +87,25 @@ function Landing() {
         </div>
       </div>
 
-      <div className={`landing-buttons flex max-w-max flex-col mt-8`}>
-        <div className={`flex ${isMobile ? "flex-col" : "flex-row"}`}>
-          {landingButtons.map((button, index) => (
-            <div key={index} className="mb-4 max-w-fit mr-4">
-              <Button
-                type={"main"}
-                content={button.content}
-                onClick={button.onClick}
-              />
-            </div>
-          ))}
-        </div>
+      <div className="landing-buttons flex flex-col md:flex-row mt-8">
+        {landingButtons.map((button, index) => (
+          <div key={index} className="mb-4 max-w-fit mr-4">
+            <Button
+              type={"main"}
+              content={button.content}
+              onClick={button.onClick}
+            />
+          </div>
+        ))}
+      </div>
 
-        <div className="landing-subtitle mt-12 text-mm opacity-80 font-light max-w-full flex flex-wrap justify-center">
-          {technologies.map((tech, index) => (
-            <React.Fragment key={tech}>
-              {index > 0 && <span className="divider mx-3 opacity-50">/</span>}
-              {tech}
-            </React.Fragment>
-          ))}
-        </div>
+      <div className="landing-subtitle mt-12 text-mm opacity-80 font-light max-w-full flex flex-wrap justify-center">
+        {technologies.map((tech, index) => (
+          <React.Fragment key={tech}>
+            {index > 0 && <span className="divider mx-3 opacity-50">/</span>}
+            {tech}
+          </React.Fragment>
+        ))}
       </div>
     </div>
   );
