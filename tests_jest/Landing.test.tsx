@@ -20,10 +20,8 @@ describe("Landing", () => {
 
     const readExperienceButton = screen.getByText(/Latest work on GitHub/i);
     const readCVButton = screen.getByText(/Visit my LinkedIn profile/i);
-    const emailMeButton = screen.getByText(/Email Me/i);
 
     expect(readExperienceButton).toBeInTheDocument();
     expect(readCVButton).toBeInTheDocument();
-    expect(emailMeButton).toBeInTheDocument();
   });
 });

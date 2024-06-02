@@ -34,11 +34,6 @@ function Landing() {
           "_blank"
         ),
     },
-    {
-      type: "main",
-      content: "Email Me",
-      onClick: () => (window.location.href = "mailto:zorielbuc135@gmail.com"),
-    },
   ];
 
   const isMobile = useIsMobile();
